@@ -1,0 +1,108 @@
+/* style.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+
+#gameContainer {
+    width: 400px;
+    height: 600px;
+    position: relative;
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+#player {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#droplet {
+    width: 20px;
+    height: 20px;
+    background-color: grey;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px; /* Start off-screen */
+    left: 50%;
+}
+
+#coin {
+    width: 20px; /* Set the width of the coin */
+    height: 20px; /* Set the height of the coin */
+    background-image: url('file:///C:/Users/PC/Downloads/CoinDDGif.gif'); /* Use the image as background */
+    background-size: cover;
+    border-radius: 50%; /* Optional: if you want to maintain the round shape */
+    position: absolute;
+    top: -20px; /* Start off-screen */
+}
+
+#smallCoin {
+    width: 10px; /* Smaller width */
+    height: 10px; /* Smaller height */
+    background-image: url('file:///C:/Users/PC/Downloads/CoinDDGif.gif'); /* Set the path to your small coin image */
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px; /* Start off-screen */
+}
+
+#scoreDisplay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #000;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+#achievementDisplay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
+}
+
+#gameOverDisplay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: red;
+    color: white;
+    font-size: 24px;
+    border-radius: 10px;
+    display: none; /* Initially hidden */
+    z-index: 100; /* Ensure it's above other elements */
+}
+
+#tryAgainButton {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #444;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#tryAgainButton:hover {
+    background-color: #555;
+}
